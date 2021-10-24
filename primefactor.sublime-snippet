@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+void primefactor(ll n) // O(sqrt(n))
+{
+	for (ll i = 2; i * i <= n; ++i)
+	{
+		if (n % i == 0)
+		{
+			ll cnt(0);
+			while (n % i == 0)
+			{
+				cnt++;
+				n /= i;
+			}
+			cout << i << "^" << cnt << "\n";
+		}
+	}
+	if (n > 1)
+	{
+		cout << n << "^" << 1 << "\n";
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>primefactor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

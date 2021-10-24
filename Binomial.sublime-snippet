@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+const int mod = 1e9 + 7;
+vector<long> fact(2e5, 1);
+long modpower(long a, long n) // O(log n)
+{
+    long res = 1;
+
+    while (n > 0)
+    {
+        if (n & 1)
+        {
+            res =  ((res) % mod * (a % mod)) % mod;
+            n--;
+        }
+        else
+        {
+            a = ((a % mod) * (a % mod)) % mod;
+            n /= 2;
+        }
+    }
+
+    return res % mod;
+}
+long inv(long a)
+{
+    return (modpower(a, mod - 2) % mod + mod) % mod;
+}
+long binom(long a, long b)
+{
+    if (b < 0 || a < 0)return 0;
+    if (b > a) return 0;
+    return (((fact[a] * inv(fact[b])) % mod * inv(fact[a - b])) % mod + mod) % mod;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Binomail</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

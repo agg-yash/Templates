@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+ll gcd_extend(ll a, ll b, ll& x, ll& y) 
+{
+    
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+
+    
+    else {
+        ll g = gcd_extend(b,
+                           a % b, x, y);
+        ll x1 = x, y1 = y;
+        x = y1;
+        y = x1 - (a / b) * y1;
+        return g;
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ExtendedEuclid</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

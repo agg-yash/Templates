@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+long modpower(long a, long n, long m) // O(log n)
+{
+   long res = 1;
+
+   while (n > 0)
+   {
+      if (n & 1)
+      {
+         res =  ((res) % m * (a % m)) % m;
+         n--;
+      }
+      else
+      {
+         a = ((a % m) * (a % m)) % m;
+         n /= 2;
+      }
+   }
+
+   return res % m;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>modpower</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

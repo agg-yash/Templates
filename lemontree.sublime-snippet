@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+#include <bits/stdc++.h>
+using namespace std;
+#define long long long
+int main()
+{
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+   int t = 1;
+   cin >> t;
+   while (t--)
+   {
+      
+   }
+   return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>lemontree</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	 <scope>source.c++</scope> 
+</snippet>

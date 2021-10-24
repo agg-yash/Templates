@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+bool probablyPrimeFermat(ll n, ll iter = 5) //O(k log2n),
+{
+	if (n < 4)
+		return n == 2 || n == 3;
+
+	for (ll i = 0; i < iter; i++) {
+		ll a = 2 + rand() % (n - 3);
+		if (modpower(a, n - 1, n) != 1)
+			return false;
+	}
+	return true;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>PrimeFermat</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+ll power(ll a, ll n) // O(log(n))
+{
+	ll res = 1;
+
+	while (n > 0)
+	{
+		if (n & 1) // odd
+		{
+			res *= a;
+			n--;
+		}
+		else
+		{
+			a *= a;
+			n /= 2;
+		}
+	}
+	return res;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>power</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

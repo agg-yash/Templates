@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+ll modInverse(ll a, ll m) // O(log m)
+{
+    ll g = gcd(a, m);
+    if (g != 1)
+        return -1;
+    else
+    {
+        // If a and m are relatively prime, then modulo
+        // inverse is a^(m-2) mode m
+        return power(a, m - 2, m);
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Modinverse</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

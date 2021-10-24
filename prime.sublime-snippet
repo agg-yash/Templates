@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+bool isprime(ll n)     // O(sqrt(n))
+{
+	if (n == 1)
+	{
+		return false;
+	}
+
+	for (ll i = 2; i * i <= n; ++i)
+	{
+		if (n % i == 0)
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Prime</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

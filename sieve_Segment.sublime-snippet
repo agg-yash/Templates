@@ -1,0 +1,30 @@
+<snippet>
+	<content><![CDATA[
+bool isPrime(int n) {
+    for (int i = 2; i * i <= n; ++i) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+vector<bool> isPrime(r - l + 1, true);
+        for (long long  i = 2; i * i <= r; ++i) {
+            for (long long j = max(i * i, (l + i - 1) / i  * i); j <= r; j += i) {
+                isPrime[j - l] = false;
+            }
+        }
+        vector<long> primes;
+        for (long  i = max(l, 2LL); i <= r; ++i) {
+            if (isPrime[i - l]) {
+                primes.push_back(i);
+            }
+        }
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>SieveSegment</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

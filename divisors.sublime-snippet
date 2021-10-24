@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+ll calculateNoOFactors(ll n) 
+{
+	ll count = 0;
+	for (ll i = 1; i <= sqrt(n); i++)
+	{
+		if (n % i == 0)
+		{
+			if (n / i == i)
+				count++;
+			else
+				count += 2;
+		}
+	}
+	return count;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>divisors</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
